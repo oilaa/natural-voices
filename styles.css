@@ -1,0 +1,180 @@
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #c9a2ff;
+    color: #010101;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fefcff;
+    z-index: 1000;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+    height: 40px;
+    border-radius: 4px;
+}
+
+.socials .icon {
+    height: 24px;
+    margin-left: 12px;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.menu a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.menu a:last-child {
+    border-bottom: none;
+}
+
+.menu a:hover {
+    background-color: #eee;
+}
+
+.hamburger {
+    font-size: 28px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.sections {
+    margin: 40px 0;
+}
+
+.sections img {
+    max-width: 40%;
+    height: auto;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.sections h2, p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.linked-section {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    text-align: center;
+}
+
+.linked-section img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    transition: transform 0.2s ease;
+}
+
+.linked-section:hover img {
+    transform: scale(1.02);
+}
+
+.linked-section h2:hover {
+    text-decoration: underline;
+}
+
+.map-container {
+    margin: 120px auto 80px;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 12px;
+}
+
+.hsl-link {
+    text-align: center;
+    margin-top: 12px;
+}
+
+.hsl-link a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #010101;
+    text-decoration: none;
+}
+
+.hsl-link a:hover {
+    text-decoration: underline;
+}
+
+footer {
+  background-color: #fefcff;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+  color: #010101;
+}
+
+.footer-content a {
+  display: block;
+  margin-top: 10px;
+  color: #010101;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+.back-to-top {
+    display: block;
+    margin-top: 10px;
+    color: #333;
+    text-decoration: none;
+}
