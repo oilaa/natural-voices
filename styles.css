@@ -36,8 +36,11 @@ main {
 }
 
 .logo {
-    height: 40px;
+    height: 60px;
     border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .socials .icon {
@@ -51,7 +54,7 @@ main {
 .menu {
     display: none;
     flex-direction: column;
-    background-color: #fff;
+    background-color: #fefcff;
     position: absolute;
     top: 60px;
     right: 20px;
@@ -63,7 +66,7 @@ main {
 .menu a {
     padding: 10px 15px;
     text-decoration: none;
-    color: #333;
+    color: #010101;
     font-size: 16px;
     border-bottom: 1px solid #eee;
 }
@@ -82,6 +85,23 @@ main {
     user-select: none;
 }
 
+.content-section {
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
+    padding: 10px 10px;
+}
+
+.content-section img {
+    max-width: 40%;
+    width: 40%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
 .sections {
     margin: 40px 0;
 }
@@ -89,8 +109,7 @@ main {
 .sections img {
     max-width: 40%;
     height: auto;
-    margin: auto;
-    margin-top: 10px;
+    margin: 10px auto;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -105,7 +124,7 @@ main {
     text-decoration: none;
     color: inherit;
     display: inline-block;
-    text-align: center;
+    text-align: left;
 }
 
 .linked-section img {
@@ -125,7 +144,7 @@ main {
 
 .map-container {
     margin: 120px auto 80px;
-    max-width: 800px;
+    max-width: 700px;
     padding: 0 20px;
 }
 
@@ -175,6 +194,6 @@ footer {
 .back-to-top {
     display: block;
     margin-top: 10px;
-    color: #333;
+    color: #010101;
     text-decoration: none;
 }
