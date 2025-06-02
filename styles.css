@@ -8,10 +8,11 @@ html, body {
     padding-top: 60px;
     display: flex;
     flex-direction: column;
+    scroll-behavior: smooth;
 }
 
 main {
-  flex: 1;
+    flex: 1;
 }
 
 .navbar {
@@ -30,9 +31,9 @@ main {
 }
 
 .nav-right {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .logo {
@@ -46,9 +47,6 @@ main {
 .socials .icon {
     height: 24px;
     margin-left: 12px;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
 }
 
 .menu {
@@ -79,25 +77,43 @@ main {
     background-color: #eee;
 }
 
+@media (min-width: 1152px) {
+    .hamburger {
+        display: none;
+    }
+
+    .menu {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        border: 1px solid #010101;
+        background: none;
+    }
+}
+
 .hamburger {
     font-size: 28px;
     cursor: pointer;
     user-select: none;
 }
 
+.content-section a {
+    display: inline-block;
+    text-align: center;
+}
+
 .content-section {
     text-align: center;
     max-width: 1000px;
     margin: auto;
-    padding: 10px 10px;
+    padding: 10px;
 }
 
 .content-section img {
     max-width: 40%;
     width: 40%;
     height: auto;
-    display: flex;
-    align-items: center;
+    display: block;
     margin: 10px auto;
     border-radius: 10px;
 }
@@ -111,8 +127,7 @@ main {
     height: auto;
     margin: 10px auto;
     border-radius: 10px;
-    display: flex;
-    align-items: center;
+    display: block;
 }
 
 .sections h2, p {
@@ -123,8 +138,10 @@ main {
 .linked-section {
     text-decoration: none;
     color: inherit;
-    display: inline-block;
+    display: block;
     text-align: left;
+    width: fit-content;
+    margin: 0 auto;
 }
 
 .linked-section img {
@@ -172,23 +189,23 @@ main {
 }
 
 footer {
-  background-color: #fefcff;
-  text-align: center;
-  padding: 20px 10px;
-  font-size: 14px;
-  color: #010101;
+    background-color: #fefcff;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 14px;
+    color: #010101;
 }
 
 .footer-content a {
-  display: block;
-  margin-top: 10px;
-  color: #010101;
-  text-decoration: none;
-  font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    color: #010101;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .footer-content a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .back-to-top {
