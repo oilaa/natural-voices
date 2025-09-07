@@ -2,12 +2,13 @@ html, body {
     font-family: 'Montserrat', sans-serif;
     background-color: #c9a2ff;
     color: #010101;
-    height: 100%;
     margin: 0;
     padding: 0;
     padding-top: 60px;
     display: flex;
     flex-direction: column;
+    min-height: 100%;
+    scroll-behavior: smooth;
 }
 
 main {
@@ -26,7 +27,6 @@ main {
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    text-decoration: none;
 }
 
 .nav-right {
@@ -58,7 +58,6 @@ main {
     right: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    overflow: hidden;
     min-width: 200px;
     padding: 10px;
 }
@@ -68,7 +67,6 @@ main {
     width: 100%;
     padding: 10px 0;
     text-decoration: none;
-    text-align: left;
     color: #010101;
     font-size: 16px;
     border-bottom: 1px solid #eee;
@@ -88,41 +86,35 @@ main {
     user-select: none;
 }
 
-.content-section a {
-    display: inline-block;
-    text-align: center;
-}
-
 .content-section {
+    background-color: #f6ecff;
     text-align: center;
     max-width: 1000px;
-    margin: auto;
-    padding: 10px;
+    margin: 40px auto;
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.3s ease, opacity 0.6s ease;
+    opacity: 0;
+    transform: translateY(20px);
 }
 
-.content-section img {
-    max-width: 40%;
-    min-width: 30%;
-    width: 40%;
-    height: auto;
-    display: block;
-    margin: 10px auto;
-    border-radius: 10px;
+.content-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content-section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
 }
 
 .sections {
     margin: 40px 0;
 }
 
-.sections img {
-    max-width: 40%;
-    height: auto;
-    margin: 10px auto;
-    border-radius: 10px;
-    display: block;
-}
-
-.sections h2, p {
+.sections h2, 
+.sections p {
     text-align: center;
     margin-bottom: 10px;
 }
@@ -136,19 +128,49 @@ main {
     margin: 0 auto;
 }
 
-.linked-section img {
-    max-width: 100%;
+.section-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 40px auto;
+    gap: 20px;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+
+.text-content {
+    flex: 1;
+    min-width: 280px;
+    text-align: left;
+}
+
+.text-content h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.text-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #2d2d2d;
+}
+
+.content-section img,
+.section-wrapper img {
+    max-width: 40%;
+    min-width: 260px;
     height: auto;
-    margin-top: 10px;
+    margin: 10px auto;
+    border-radius: 10px;
+    display: block;
     transition: transform 0.2s ease;
+    object-fit: cover;
 }
 
-.linked-section:hover img {
+.content-section:hover img,
+.section-wrapper:hover img {
     transform: scale(1.02);
-}
-
-.linked-section h2:hover {
-    text-decoration: underline;
 }
 
 .map-container {
@@ -200,45 +222,53 @@ footer {
     text-decoration: underline;
 }
 
-.back-to-top {
-    display: block;
-    margin-top: 10px;
-    color: #010101;
-    text-decoration: none;
+[id] {
+    scroll-margin-top: 380px;
 }
 
-.section-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 720px;
-    margin: 40px auto;
-    gap: 20px;
-    padding: 10px 20px;
-    flex-wrap: wrap;
+@media (max-width: 768px) {
+    .section-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-content {
+        text-align: center;
+    }
+
+    .content-section img,
+    .section-wrapper img {
+        max-width: 80%;
+    }
+
+    .text-content h2 {
+        font-size: 24px;
+    }
+
+    .text-content p {
+        font-size: 16px;
+    }
 }
 
-.text-content {
-    flex: 1;
-    min-width: 280px;
-    text-align: left;
-}
+@media (max-width: 480px) {
+    .navbar {
+        padding: 8px 12px;
+    }
 
-.text-content h2 {
-    margin-bottom: 10px;
-    font-size: 24px;
-}
+    .hamburger {
+        font-size: 24px;
+    }
 
-.text-content p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #2d2d2d;
-}
+    .text-content h2 {
+        font-size: 20px;
+    }
 
-.section-wrapper img {
-    flex: 1;
-    max-width: 300px;
-    height: auto;
-    border-radius: 10px;
-    object-fit: cover;
+    .text-content p {
+        font-size: 15px;
+    }
+
+    .content-section img,
+    .section-wrapper img {
+        max-width: 90%;
+    }
 }
