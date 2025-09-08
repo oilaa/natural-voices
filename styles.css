@@ -88,7 +88,7 @@ main {
 
 .content-section {
     background-color: #f6ecff;
-    text-align: center;
+    text-align: left;
     max-width: 1000px;
     margin: 40px auto;
     padding: 40px 20px;
@@ -115,17 +115,20 @@ main {
 
 .sections h2, 
 .sections p {
-    text-align: center;
+    text-align: left;
     margin-bottom: 10px;
 }
 
 .linked-section {
-    text-decoration: none;
     color: inherit;
     display: block;
     text-align: left;
     width: fit-content;
     margin: 0 auto;
+}
+
+.linked-section a {
+    text-align: left;
 }
 
 .section-wrapper {
@@ -222,8 +225,20 @@ footer {
     text-decoration: underline;
 }
 
+.content-section a {
+    display: block;
+    margin-top: 10px;
+    color: #010101;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.content-section a:hover {
+    text-decoration: underline;
+}
+
 [id] {
-    scroll-margin-top: 380px;
+    scroll-margin-top: 200px;
 }
 
 @media (max-width: 768px) {
