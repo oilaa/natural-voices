@@ -1,22 +1,24 @@
+/* Perusasetukset koko sivulle */
 html, body {
     font-family: 'Montserrat', sans-serif;
     background-color: #c9a2ff;
     color: #010101;
     margin: 0;
     padding: 0;
-    padding-top: 60px;
+    padding-top: 60px; /* Tilaa navin alle */
     display: flex;
     flex-direction: column;
     min-height: 100%;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Sulava scrollaus (ei toimi?) */
 }
 
 main {
     flex: 1;
 }
 
+/* Navigaatiopalkki */
 .navbar {
-    position: fixed;
+    position: fixed; /* Pysyy ylhäällä */
     top: 0;
     left: 0;
     right: 0;
@@ -35,6 +37,7 @@ main {
     gap: 15px;
 }
 
+/* Logon säiliö */
 .logo {
     height: 60px;
     border-radius: 4px;
@@ -43,11 +46,13 @@ main {
     gap: 20px;
 }
 
+/* Pitää sosiaali-ikonit halutussa paikassa */
 .socials .icon {
     height: 24px;
     margin-left: 12px;
 }
 
+/* Piilotettu menu hamburgerille */
 .menu {
     display: none;
     flex-direction: column;
@@ -62,6 +67,7 @@ main {
     padding: 10px;
 }
 
+/* Linkit menussa */
 .menu a {
     display: block;
     width: 100%;
@@ -80,12 +86,14 @@ main {
     background-color: #eee;
 }
 
+/* Hamburger-menun tyyli */
 .hamburger {
     font-size: 28px;
     cursor: pointer;
     user-select: none;
 }
 
+/* Sisältöosiot */
 .content-section {
     background-color: #f6ecff;
     text-align: left;
@@ -99,11 +107,13 @@ main {
     transform: translateY(20px);
 }
 
+/* Kun osio näkyvissä */
 .content-section.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
+/* Hover-efekti osioille */
 .content-section:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
@@ -131,6 +141,7 @@ main {
     text-align: left;
 }
 
+/* Sisällön asettelu */
 .section-wrapper {
     display: flex;
     align-items: center;
@@ -142,6 +153,8 @@ main {
     flex-wrap: wrap;
 }
 
+
+/* Tekstisisällön ja kuvien tyylit */
 .text-content {
     flex: 1;
     min-width: 280px;
@@ -176,6 +189,7 @@ main {
     transform: scale(1.02);
 }
 
+/* Kartta-upotuksen tyyli */
 .map-container {
     margin: 120px auto 80px;
     max-width: 700px;
@@ -189,6 +203,7 @@ main {
     border-radius: 12px;
 }
 
+/* HSL-linkin tyyli */
 .hsl-link {
     text-align: center;
     margin-top: 12px;
@@ -205,6 +220,7 @@ main {
     text-decoration: underline;
 }
 
+/* Footerin tyyli */
 footer {
     background-color: #fefcff;
     text-align: center;
@@ -237,29 +253,27 @@ footer {
     text-decoration: underline;
 }
 
+/* Tilaa sivun yläosaan klikatessa hamburger-menun ankkurilinkkejä */
 [id] {
     scroll-margin-top: 200px;
 }
 
+/* Responsiivisuus mobiililaitteilla */
 @media (max-width: 768px) {
     .section-wrapper {
         flex-direction: column;
         text-align: center;
     }
-
     .text-content {
         text-align: center;
     }
-
     .content-section img,
     .section-wrapper img {
         max-width: 80%;
     }
-
     .text-content h2 {
         font-size: 24px;
     }
-
     .text-content p {
         font-size: 16px;
     }
@@ -269,19 +283,15 @@ footer {
     .navbar {
         padding: 8px 12px;
     }
-
     .hamburger {
         font-size: 24px;
     }
-
     .text-content h2 {
         font-size: 20px;
     }
-
     .text-content p {
         font-size: 15px;
     }
-
     .content-section img,
     .section-wrapper img {
         max-width: 90%;

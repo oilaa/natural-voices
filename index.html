@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="fi">
     <head>
+        <!-- Määrittelee UTF-8 merkistön ja näkymän mobiililaitteille -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Natural Voices</title>
+
+        <!-- Favicon -->
         <link rel="icon" href="images/logo.jpg" class="favicon">
+
+        <!-- CSS-tiedosto -->
         <link rel="stylesheet" href="styles.css">
+        
+        <!-- Google Fonts - Montserrat -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
 <body id="top">
 <main>
+    <!-- Navigaatiopalkki -->
     <div class="navbar">
+        <!-- Logo ja somelinkit -->
         <div class="logo">
             <a href="#">
                 <img src="images/logo-pitka.jpg" alt="Natural Voices Logo" class="logo">
@@ -22,9 +31,12 @@
                 <a href="https://www.facebook.com/naturalvoiceshelsinki/" target="_blank"><img src="images/facebook.png" alt="facebook" class="icon"></a>
             </div>
         </div>
+
+        <!-- Hamburger-menu -->
         <div class="nav-right">
             <div class="hamburger" id="hamburger">&#9776;</div>
             <div class="menu" id="menu">
+                <!-- Linkit sivun eri osioihin -->
                 <a href="#top" class="linked-section">Etusivu</a>
                 <a href="#Musiikkikoulu" class="linked-section">Musiikkikoulu</a>
                 <a href="#Iltapäiväkerho" class="linked-section">Iltapäiväkerho</a>
@@ -33,11 +45,15 @@
             </div>
         </div>
     </div>
+
+    <!-- Sivun sisältöosiot -->
     <div class="sections">
+        <!-- Musiikkikoulu-osio -->
         <section class="content-section">
             <div class="section-wrapper">
                 <div class="text-content">
                     <h2 id="Musiikkikoulu">Musiikkikoulu</h2>
+                    <!-- Tekstit ja ilmoittautumislinkit -->
                     <p>Musiikkikoulumme sai alkunsa vuonna 2015 Pariisissa ja siitä lähtien olemme opettaneet lapsia, nuoria ja aikuisia monipuolisesti musiikin saloihin. Pääopettajamme ovat laulunopettaja Virve Maria Magdaleno sekä säveltäjä Juan de Dios Magdaleno ja vaihdellen vuosittain meillä on myös ammattitaitoisia ja mukavia musiikin tuntiopettajia eri instrumenteissa ja musiikin ryhmäopetuksissa. Yksityistunnit järjestetään pääosin Töölössä os. Linnankoskenkatu 4.</p>
                     <p><a href="https://forms.gle/FaHHWaCevE7QhQwr6">Musiikkikoulut ja kuoro 2025-2026 ilmoittautuminen</a></p>
                     <p><a href="https://forms.gle/xFxRnz5TK2QDVW6p8">Yksityistunneille ilmoittautuminen</a></p>
@@ -46,6 +62,8 @@
                 <img src="images/musiikkikoulu.jpeg" alt="Musiikkikoulu">
             </div>
         </section>
+
+        <!-- Iltapäiväkerho-osio -->
         <section class="content-section">
             <div class="section-wrapper">
                 <div class="text-content">
@@ -55,10 +73,13 @@
                 <img src="images/ip-kerho2.jpeg" alt="Iltapäiväkerho kuva 2">
             </div>
         </section>
+
+        <!-- Harrastamisen Suomen malli -osio -->
             <section class="content-section">
                 <div class="section-wrapper">
                     <div class="text-content">
                         <h2 id="HarrastamisenSuomenMalli"><a href="https://harrastamisensuomenmalli.fi" target="_blank" class="linked-section">Harrastamisen Suomen malli</a></h2>
+                        <!-- Luettelot ja ilmoittautumiset -->
                         <p>Harrastamisen Suomenmallin ryhmät vuonna 2025-2026: Lisäämme ilmoittautumislinkit niihin harrastuksiin, joissa on tilaa.</p>
                         <p><a href="#HarrastamisenSuomenMalli">Elokuvapajat:</a></p>
                             <li>Porolahden peruskoulu (täynnä)</li>
@@ -81,6 +102,8 @@
                 <img src="images/HSM.jpg" alt="Harrastamisen Suomen malli">
             </div>
         </section>
+
+        <!-- Tilavuokraus-osio -->
         <section class="content-section">
             <a href="" target="_blank" class="linked-section"></a>
                 <div class="section-wrapper">
@@ -92,6 +115,8 @@
             </div>
         </section>
     </div>
+
+    <!-- Google Maps -upotus ja HSL-linkki -->
     <div class="map-container">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1983.578888320037!2d24.9201113!3d60.185247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920bb2057a6f93%3A0x44544a1a99a91a8d!2sLinnankoskenkatu%204%2C%2000250%20Helsinki!5e0!3m2!1sen!2sfi!4v1695215378043!5m2!1sen!2sfi"
                 frameborder="0" allowfullscreen="" loading="lazy"></iframe>
@@ -100,6 +125,8 @@
         </div>
     </div>
 </main>
+
+<!-- Sivun footer -->
 <footer>
     <div class="footer-content">
         <p>Yhteystiedot: Puh: +358 44 972 2919 | Sposti: naturalvoiceshelsinki@gmail.com</p>
@@ -107,6 +134,8 @@
         <a href="#top">Takaisin ylös</a>
     </div>
 </footer>
+
+<!-- JS-tiedosto -->
 <script src="scripts.js" defer></script>
 </body>
 </html>
